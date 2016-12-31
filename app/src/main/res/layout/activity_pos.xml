@@ -10,4 +10,231 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ryanpark.tomato.POS">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="324dp"
+            android:verticalScrollbarPosition="right">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|right|center_horizontal">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="No."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemIndex" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemName"
+                        android:text="Product"
+                        android:layout_width="160dp" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:text="Qt."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemQuantity" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:text="Value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemValue" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:text="Dsc."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemDiscount" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:enabled="false" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="#1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemIndex" />
+
+                    <Space android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemName"
+                        android:text="Item Name Space"
+                        android:layout_width="160dp" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemQuantity" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:text="36000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemValue" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <TextView
+                        android:text="-3600"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/itemDiscount" />
+
+                    <Space
+                        android:layout_height="match_parent"
+                        android:layout_width="10dp" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+        </ScrollView>
+
+        <TextView
+            android:text="Total :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/valueTotal"
+            android:textSize="24sp" />
+
+        <TextView
+            android:text="Discount :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/discTotal"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:text="Add Item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addBtn"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="Del Item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/delBtn"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:text="SETTING"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button13" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:text="Request"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reqBtn"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
