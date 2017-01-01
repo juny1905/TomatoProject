@@ -35,7 +35,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:text="No."
+                        android:text="No"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/itemIndex" />
@@ -111,7 +111,7 @@
                     <TextView
                         android:layout_height="wrap_content"
                         android:id="@+id/itemName"
-                        android:text="Item Name Space"
+                        android:text="Item Name"
                         android:layout_width="160dp" />
 
                     <Space
@@ -164,19 +164,59 @@
             </TableLayout>
         </ScrollView>
 
-        <TextView
-            android:text="Total :"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/valueTotal"
-            android:textSize="24sp" />
+            android:layout_height="30dp">
 
-        <TextView
-            android:text="Discount :"
+            <TextView
+                android:text="Total :"
+                android:layout_height="wrap_content"
+                android:id="@+id/valueTotal"
+                android:textSize="24sp"
+                android:layout_width="258dp" />
+
+            <TextView
+                android:text="Tax(%) :"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:layout_width="55dp"
+                android:layout_weight="0.67" />
+
+            <TextView
+                android:text="100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/taxRateDisp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/discTotal"
-            android:textSize="24sp" />
+            android:layout_height="30dp">
+
+            <TextView
+                android:text="Discount :"
+                android:layout_width="258dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/discTotal"
+                android:textSize="24sp" />
+
+            <TextView
+                android:text="Rate(%) :"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView7"
+                android:layout_weight="1.51"
+                android:layout_width="55dp" />
+
+            <TextView
+                android:text="100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/discRateDisp"
+                android:layout_weight="1.14" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -190,14 +230,14 @@
                 android:layout_weight="1">
 
                 <Button
-                    android:text="Add Item"
+                    android:text="Add Item(S)"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/addBtn"
                     android:layout_weight="1" />
 
                 <Button
-                    android:text="Del Item"
+                    android:text="DEL ITEM(S)"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/delBtn"
@@ -215,7 +255,8 @@
                     android:text="SETTING"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/button13" />
+                    android:id="@+id/button13"
+                    android:onClick="clickSetting" />
 
             </LinearLayout>
 
